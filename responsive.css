@@ -1,0 +1,152 @@
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  .navbar {
+    flex-direction: column;
+    margin-left: 0;
+    height: auto;
+    padding: 20px;
+  }
+
+  .nav-items {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #main {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+    margin-left: 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sec-1,
+  .sec-2 {
+    width: 100%;
+  }
+
+  .sec-2 img {
+    width: 80%;
+    height: auto;
+  }
+
+  .manu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .manu-grid-items,
+  .manu-grid-items img {
+    width: 100%;
+  }
+
+  .tetimonial {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+    .tstmnl-card img{
+    width: 20vw;
+  }
+  #gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  .video-location {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-location video,
+  .video-location iframe {
+    margin-left: 50%;
+    margin-top: 5vh;
+    height: auto;
+    margin: 0;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+  body{
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+  .navbar h1 {
+    font-size: 22px;
+  }
+
+  .nav-items ul li {
+    display: block;
+    padding: 10px 0;
+    gap: 1vh;
+    font-size: 16px;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  #main{
+    padding-top: 30vh;
+  }
+  .order-now,
+  .contact-us {
+    width: 150px;
+  }
+
+  .manu-grid {
+    grid-template-columns: repeat(3,   1fr);
+  }
+
+  .tetimonial {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3,   1fr);
+  }
+
+  .tstmnl-card {
+    height: auto;
+  }
+  .tstmnl-card img{
+    width: 20vw;
+  }
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+  .video-location{
+    width: 10px;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

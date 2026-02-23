@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop - Order Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-dark: #41171E;
+      --accent: #FF9712;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--primary-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .order-container {
+      background-color: var(--white);
+      width: 100%;
+      max-width: 600px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .order-container h1 {
+      text-align: center;
+      color: var(--primary-dark);
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--primary-dark);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid #eee;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 151, 18, 0.2);
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 400;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--accent);
+      border: none;
+      border-radius: 12px;
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e68300;
+    }
+
+    @media (max-width: 500px) {
+      .order-container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-container">
+    <h1>Place Your Order</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="coffee">Choose Your Coffee</label>
+        <select id="coffee" name="coffee" required>
+          <option value="">-- Select Coffee --</option>
+          <option>Espresso</option>
+          <option>Latte</option>
+          <option>Cappuccino</option>
+          <option>Americano</option>
+          <option>Mocha</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Size</label>
+        <div class="radio-group">
+          <label><input type="radio" name="size" value="Small" required> Small</label>
+          <label><input type="radio" name="size" value="Medium"> Medium</label>
+          <label><input type="radio" name="size" value="Large"> Large</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Add Extras</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="extras" value="Extra Shot"> Extra Shot</label>
+          <label><input type="checkbox" name="extras" value="Whipped Cream"> Whipped Cream</label>
+          <label><input type="checkbox" name="extras" value="Caramel Syrup"> Caramel Syrup</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Special Instructions</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+</body>
+</html>
